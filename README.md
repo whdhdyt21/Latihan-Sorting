@@ -1,2 +1,2 @@
 # Latihan-Sorting
-Metode Sorting Menggunakan Bubble dan Selestion
+Metode Sorting Menggunakan Bubble dan Selection

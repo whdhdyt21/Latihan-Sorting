@@ -20,6 +20,7 @@ void printArray(int arr[], int n)
     cout << endl;
 }
 
+// BubbleSort dengan input dari user dan tampilan ketika proses pengurutan
 void BubbleSort(int arr[], int n)
 {
     bool swap = false;
@@ -29,28 +30,35 @@ void BubbleSort(int arr[], int n)
         swap = true;
         for (int j = 1; j < n; j++)
         {
-            if (arr[j-1] > arr[j])
+            if (arr[j - 1] > arr[j])
             {
                 swap = false;
                 int temp = arr[j];
-                arr [j] = arr[j-1];
-                arr[j-1] = temp;
+                arr[j] = arr[j - 1];
+                arr[j - 1] = temp;
+
+                // Tampilan ketika proses pengurutan
+                printArray(arr, n);
             }
         }
     }
     printArray(arr, n);
 }
 
+
 int main(int argc, char const *argv[])
 {
     int n;
     cout << "Masukkan banyaknya data : ";
     cin >> n;
+    
     int arr[n];
     inputArray(arr, n);
     cout << "Data sebelum diurutkan : ";
     printArray(arr, n);
-    cout << "Data setelah diurutkan : ";
+
+    cout << "\n\nData setelah diurutkan : " << endl;
     BubbleSort(arr, n);
+
     return 0;
 }
